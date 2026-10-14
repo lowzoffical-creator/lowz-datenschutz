@@ -1,0 +1,211 @@
+<!doctype html>
+<!-- Datenschutzerklärung Low-Z (Phase 14e, F2: GitHub Pages, Deutsch + Englisch mit Umschalter – Nutzer 14.10.2026).
+     Quelle der Angaben: docs/systeme/server.md „Datenliste und Fristen“ und docs/systeme/plattform.md – ändert sich dort etwas,
+     hier im selben Zug nachziehen und das Datum „Stand“ erhöhen. Veröffentlicht mit tools/datenschutz.py (eigenes Repo, Pages).
+     Verantwortlicher und Kontakt-Mail: Angabe des Nutzers 14.10.2026.
+     Geprüft 14.10.2026 (Claude Code) gegen die Pflichtliste Art. 13 DSGVO; Belege:
+     - GitHub im DPF: dataprivacyframework.gov/participant/6174 (EU-U.S. DPF Active, nächste Zertifizierung 03.08.2027)
+     - Meta Platforms, Inc. im DPF: dataprivacyframework.gov/participant/4452 (Active – Re-certification under Review, fällig 23.07.2027)
+     - Angemessenheitsbeschluss DPF gilt weiter trotz Trump v. Slaughter (US Supreme Court 29.06.2026); EDSA bat die Kommission um
+       Prüfung, noyb verlangt Widerruf – bei Widerruf Abschnitt 5 ändern (activemind.legal/guides/dpf-supreme-court, hunton.com 2026)
+     - Meta-Verantwortlicher EU für Quest/Horizon: Meta Platforms Ireland Limited (meta.com/legal/quest/territories)
+     - Hetzner-Anschrift: hetzner.com/de/rechtliches/impressum -->
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Low-Z – Datenschutz / Privacy</title>
+<style>
+  :root { --bg: #0b0b0c; --karte: #151517; --text: #e9e6e3; --leise: #a39e99; --rot: #c1121f; --linie: #2a2a2e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+  header { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 8px; }
+  .marke { font-weight: 800; font-size: 28px; letter-spacing: 0.04em; }
+  .marke b { color: var(--rot); }
+  .umschalter { display: flex; border: 1px solid var(--linie); border-radius: 8px; overflow: hidden; }
+  .umschalter button { background: transparent; color: var(--leise); border: 0; padding: 8px 16px; font: inherit; font-weight: 600; cursor: pointer; }
+  .umschalter button[aria-pressed="true"] { background: var(--rot); color: #fff; }
+  h1 { font-size: 24px; margin: 24px 0 4px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; color: #fff; border-bottom: 1px solid var(--linie); padding-bottom: 4px; }
+  .stand { color: var(--leise); font-size: 14px; margin: 0 0 16px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px; border-bottom: 1px solid var(--linie); }
+  th { color: var(--leise); font-weight: 600; }
+  .karte { background: var(--karte); border: 1px solid var(--linie); border-radius: 10px; padding: 12px 16px; }
+  a { color: #ff6b6b; }
+  [lang="en"][hidden], [lang="de"][hidden] { display: none; }
+  @media (max-width: 560px) { table, tbody, tr, td, th { display: block; } thead { display: none; } td { border: 0; padding: 2px 0; }
+    tr { border-bottom: 1px solid var(--linie); padding: 8px 0; } td:first-child { font-weight: 700; } }
+</style>
+</head>
+<body>
+<main>
+<header>
+  <div class="marke">LOW-<b>Z</b></div>
+  <div class="umschalter" role="group" aria-label="Sprache / Language">
+    <button type="button" data-sprache="de" aria-pressed="true">Deutsch</button>
+    <button type="button" data-sprache="en" aria-pressed="false">English</button>
+  </div>
+</header>
+
+<!-- ======================================================================= DEUTSCH -->
+<section lang="de">
+<h1>Datenschutzerklärung</h1>
+<p class="stand">Stand: 14. Oktober 2026 · gilt für das VR-Spiel „Low-Z“ (Meta Quest) und seine Spielserver</p>
+
+<div class="karte"><strong>Kurz gesagt:</strong> Low-Z ist ein Spiel in Entwicklung, das über die Test-Kanäle des Meta Horizon Store verteilt wird.
+Wir speichern nur, was für das Spielen auf unseren Servern nötig ist. Es gibt keine Werbung, kein Tracking und keine Analyse-Dienste.
+Dein Konto kannst du jederzeit im Spiel löschen.</div>
+
+<h2>1. Welche Daten wir verarbeiten</h2>
+<table>
+<thead><tr><th>Daten</th><th>Wozu</th><th>Wie lange</th></tr></thead>
+<tbody>
+<tr><td>Spielkonto: zufällige Konto-Nummer („Tester-Nummer“), Prüfwert (Hash) eines zufälligen Geräte-Schlüssels, den die App selbst erzeugt (keine Gerätekennung), Spielwerte (z. B. Münzen, Stufe, Freischaltungen), Zeitpunkte von Anlage und letzter Anmeldung, Zustimmung zu den Tester-Hinweisen (Fassung und Zeitpunkt), ggf. Sperrvermerk</td>
+<td>Anmeldung am Spielserver, Spielfortschritt</td><td>bis du das Konto löschst</td></tr>
+<tr><td>Meta-Konto (nur am Test-Server mit der Store-App): die zwei Nutzerkennungen, die Meta für diese App bzw. unsere Organisation vergibt („app-scoped“ und „org-scoped ID“), Zeitpunkt der Verknüpfung und der letzten Prüfung</td>
+<td>nur berechtigte Tester zulassen (Meta bestätigt die Berechtigung), dein Konto nach einer Neuinstallation wiederfinden, später Käufe zuordnen</td><td>bis du das Konto löschst</td></tr>
+<tr><td>IP-Adresse</td><td>Verbindung herstellen, Schutz vor Missbrauch (Begrenzung von Anmeldeversuchen)</td><td>vollständig nur im Arbeitsspeicher des Servers, solange die Begrenzung sie braucht; in Server-Protokollen nur gekürzt (letzter Teil entfernt), 14 Tage</td></tr>
+<tr><td>Bewegungen im Spiel (Lage von Kopf und Händen, Ort der Spielfigur)</td><td>Darstellung deiner Spielfigur bei Mitspielern; Prüfung auf unmögliche Bewegungen (Schummelschutz) und Fehlersuche</td><td>Mitschnitt 14 Tage</td></tr>
+<tr><td>Server-Protokolle: technische Ereignisse wie Anmeldung (mit Tester-Nummer und gekürzter IP), App-Version, Fehler</td><td>Betrieb und Fehlersuche</td><td>14 Tage</td></tr>
+<tr><td>Sicherungen der Server-Daten (enthalten die Spielkonten)</td><td>Schutz vor Datenverlust</td><td>30 Tage; gelöschte Konten werden beim Zurückspielen einer Sicherung wieder entfernt</td></tr>
+<tr><td>Verwaltungsprotokoll (z. B. Sperren, Zugangscodes, Löschungen – mit Konto-Nummer, ohne IP)</td><td>Nachvollziehbarkeit von Verwaltungsentscheidungen, Missbrauchsabwehr</td><td>24 Monate</td></tr>
+</tbody>
+</table>
+<p>Sprache wird nicht aufgezeichnet. Wir erheben keine Namen, Anschriften, Telefonnummern oder Zahlungsdaten.</p>
+
+<h2>2. Zwecke und Rechtsgrundlagen</h2>
+<p><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> – Bereitstellung des Spiels und der Testteilnahme, die du mit dem Beitritt zum Test-Kanal und dem Start der App wünschst (Spielkonto, Meta-Prüfung, Bewegungen, Sicherungen).<br>
+<strong>Art. 6 Abs. 1 lit. f DSGVO</strong> – unser berechtigtes Interesse an einem sicheren und fairen Betrieb: Missbrauch und Angriffe abwehren (IP-Begrenzung, Sperren, Verwaltungsprotokoll), Schummeln erkennen und Fehler finden (Protokolle, Bewegungs-Mitschnitt).</p>
+
+<h2>3. Musst du die Daten angeben?</h2>
+<p>Gesetzlich nicht. Ohne diese Daten kannst du aber nicht auf unseren Servern spielen. Allein (ohne Server) spielt die App ohne Server-Konto.</p>
+
+<h2>4. Empfänger</h2>
+<ul>
+<li><strong>Hetzner Online GmbH</strong>, Industriestr. 25, 91710 Gunzenhausen, Deutschland – betreibt den Server (Standort Nürnberg) als Auftragsverarbeiter nach Art. 28 DSGVO.</li>
+<li><strong>Meta</strong> (für Nutzer in der EU: Meta Platforms Ireland Limited) – unser Server übermittelt den von deiner App erzeugten Einmal-Nachweis und deine Nutzerkennung an Meta, damit Meta bestätigt, dass dein Meta-Konto die App nutzen darf. Für Daten, die Meta selbst verarbeitet (Store, Test-Kanäle, Feedback-Funktion), ist Meta eigenständig verantwortlich; es gilt die Datenschutzrichtlinie von Meta.</li>
+<li><strong>GitHub, Inc.</strong> – stellt diese Seite bereit; beim Aufruf verarbeitet GitHub technische Zugriffsdaten (z. B. IP-Adresse).</li>
+</ul>
+<p>Andere Spieler sehen deine Spielfigur und ihre Bewegungen, nie deine Kennungen. Wir geben keine Daten an weitere Dritte weiter und verkaufen keine Daten. Meta-Kennungen geben wir nie an andere Spieler oder fremde Server weiter.</p>
+
+<h2>5. Übermittlung in Drittländer</h2>
+<p>Unser Server steht in Deutschland. Bei der Meta-Prüfung und beim Aufruf dieser Seite können Daten in die USA gelangen. Grundlage ist der Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO); Meta Platforms, Inc. und GitHub, Inc. sind danach zertifiziert.</p>
+
+<h2>6. Speicherung auf deinem Gerät</h2>
+<p>Die App speichert auf deiner Brille deine Einstellungen und die Geräte-Schlüssel für die Server – nur lokal und nur, weil du das Spiel nutzen willst. Diese Seite setzt keine Cookies und speichert nichts in deinem Browser.</p>
+
+<h2>7. Keine automatisierte Entscheidung</h2>
+<p>Es gibt keine automatisierte Entscheidungsfindung und kein Profiling im Sinne von Art. 22 DSGVO. Die automatische Bewegungsprüfung setzt nur unmögliche Bewegungen im Spiel zurück und trennt bei Bedarf die Verbindung; Sperren entscheidet ein Mensch.</p>
+
+<h2>8. Konto löschen</h2>
+<p>Im Spiel: Menü → „Konto löschen“ (mit zweifacher Rückfrage). Das Konto und seine Meta-Verknüpfung werden sofort gelöscht.
+Alternativ per E-Mail (Abschnitt 10) mit deiner Tester-Nummer (steht im Startmenü). Aus Sicherungen verschwindet das Konto spätestens nach 30 Tagen.</p>
+
+<h2>9. Deine Rechte</h2>
+<p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18) und
+Datenübertragbarkeit (Art. 20) sowie das Recht auf Beschwerde bei einer Datenschutz-Aufsichtsbehörde (Art. 77), insbesondere in dem Land, in dem du wohnst.</p>
+<div class="karte"><strong>Widerspruchsrecht (Art. 21 DSGVO):</strong> Soweit wir Daten auf Grundlage berechtigter Interessen (Art. 6 Abs. 1 lit. f) verarbeiten,
+kannst du aus Gründen, die sich aus deiner besonderen Situation ergeben, jederzeit widersprechen. Wir verarbeiten die Daten dann nicht mehr, es sei denn,
+wir können zwingende schutzwürdige Gründe nachweisen oder die Verarbeitung dient der Abwehr von Rechtsansprüchen.</div>
+
+<h2>10. Verantwortlicher und Kontakt</h2>
+<p>Markus Hirschfeld<br>E-Mail: <a href="mailto:lowzoffical@gmail.com">lowzoffical@gmail.com</a><br>
+Ein Datenschutzbeauftragter ist nicht bestellt (keine Pflicht nach Art. 37 DSGVO).</p>
+
+<h2>11. Alter</h2>
+<p>Die öffentliche Testgruppe (BETA) steht nur Personen ab 18 Jahren offen.</p>
+
+<h2>12. Änderungen</h2>
+<p>Ändert sich, welche Daten das Spiel verarbeitet, passen wir diese Seite an; das Datum oben zeigt den Stand.</p>
+</section>
+
+<!-- ======================================================================= ENGLISH -->
+<section lang="en" hidden>
+<h1>Privacy Policy</h1>
+<p class="stand">Last updated: 14 October 2026 · applies to the VR game “Low-Z” (Meta Quest) and its game servers</p>
+
+<div class="karte"><strong>In short:</strong> Low-Z is a game in development, distributed through the test channels of the Meta Horizon Store.
+We only store what is needed to play on our servers. There is no advertising, no tracking and no analytics.
+You can delete your account in the game at any time.</div>
+
+<h2>1. What data we process</h2>
+<table>
+<thead><tr><th>Data</th><th>Purpose</th><th>Retention</th></tr></thead>
+<tbody>
+<tr><td>Game account: random account number (“tester number”), a check value (hash) of a random device key that the app creates itself (not a hardware identifier), game values (e.g. coins, level, unlocks), time of creation and last sign-in, acceptance of the tester notes (version and time), a ban note if any</td>
+<td>Signing in to the game server, game progress</td><td>until you delete the account</td></tr>
+<tr><td>Meta account (only on the test server with the store app): the two user IDs Meta assigns for this app and for our organisation (“app-scoped” and “org-scoped ID”), time of linking and of the last check</td>
+<td>admitting only entitled testers (Meta confirms the entitlement), finding your account again after a reinstall, later assigning purchases</td><td>until you delete the account</td></tr>
+<tr><td>IP address</td><td>establishing the connection, protection against abuse (limiting sign-in attempts)</td><td>in full only in the server’s memory while the limit needs it; in server logs only shortened (last part removed), 14 days</td></tr>
+<tr><td>Movements in the game (position of head and hands, location of your character)</td><td>showing your character to other players; checking for impossible movement (anti-cheat) and troubleshooting</td><td>recording kept 14 days</td></tr>
+<tr><td>Server logs: technical events such as sign-ins (with tester number and shortened IP), app version, errors</td><td>operation and troubleshooting</td><td>14 days</td></tr>
+<tr><td>Backups of the server data (contain the game accounts)</td><td>protection against data loss</td><td>30 days; deleted accounts are removed again when a backup is restored</td></tr>
+<tr><td>Administration log (e.g. bans, access codes, deletions – with account number, without IP)</td><td>traceability of administrative decisions, abuse prevention</td><td>24 months</td></tr>
+</tbody>
+</table>
+<p>Voice is not recorded. We do not collect names, postal addresses, phone numbers or payment data.</p>
+
+<h2>2. Purposes and legal basis</h2>
+<p><strong>Art. 6(1)(b) GDPR</strong> – providing the game and the test participation you request by joining the test channel and starting the app (game account, Meta check, movements, backups).<br>
+<strong>Art. 6(1)(f) GDPR</strong> – our legitimate interest in secure and fair operation: preventing abuse and attacks (IP limits, bans, administration log), detecting cheating and finding bugs (logs, movement recording).</p>
+
+<h2>3. Do you have to provide the data?</h2>
+<p>Not by law. Without this data, however, you cannot play on our servers. In single-player mode (without a server) the app works without a server account.</p>
+
+<h2>4. Recipients</h2>
+<ul>
+<li><strong>Hetzner Online GmbH</strong>, Industriestr. 25, 91710 Gunzenhausen, Germany – runs the server (located in Nuremberg) as a processor under Art. 28 GDPR.</li>
+<li><strong>Meta</strong> (for users in the EU: Meta Platforms Ireland Limited) – our server sends the one-time proof created by your app and your user ID to Meta so that Meta confirms your Meta account may use the app. For data that Meta processes itself (store, test channels, feedback feature), Meta is an independent controller; Meta’s privacy policy applies.</li>
+<li><strong>GitHub, Inc.</strong> – hosts this page; when you open it, GitHub processes technical access data (e.g. IP address).</li>
+</ul>
+<p>Other players see your character and its movements, never your IDs. We do not pass data to any other third parties and do not sell data. We never pass Meta IDs to other players or to third-party servers.</p>
+
+<h2>5. Transfers to third countries</h2>
+<p>Our server is located in Germany. During the Meta check and when you open this page, data may reach the USA. The basis is the European Commission’s adequacy decision on the EU-US Data Privacy Framework (Art. 45 GDPR); Meta Platforms, Inc. and GitHub, Inc. are certified under it.</p>
+
+<h2>6. Storage on your device</h2>
+<p>The app stores your settings and the device keys for the servers on your headset – locally only, and only because you want to use the game. This page sets no cookies and stores nothing in your browser.</p>
+
+<h2>7. No automated decisions</h2>
+<p>There is no automated decision-making or profiling within the meaning of Art. 22 GDPR. The automatic movement check only resets impossible movements in the game and disconnects if needed; bans are decided by a human.</p>
+
+<h2>8. Deleting your account</h2>
+<p>In the game: menu → “Delete account” (confirmed twice). The account and its Meta link are deleted immediately.
+Alternatively by e-mail (section 10) with your tester number (shown in the start menu). The account disappears from backups after 30 days at the latest.</p>
+
+<h2>9. Your rights</h2>
+<p>You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18) and
+data portability (Art. 20), and the right to lodge a complaint with a data protection supervisory authority (Art. 77), in particular in the country where you live.</p>
+<div class="karte"><strong>Right to object (Art. 21 GDPR):</strong> Where we process data based on legitimate interests (Art. 6(1)(f)), you may object at any time
+on grounds relating to your particular situation. We will then stop processing the data unless we can demonstrate compelling legitimate grounds
+or the processing serves the defence of legal claims.</div>
+
+<h2>10. Controller and contact</h2>
+<p>Markus Hirschfeld<br>E-mail: <a href="mailto:lowzoffical@gmail.com">lowzoffical@gmail.com</a><br>
+No data protection officer has been appointed (not required under Art. 37 GDPR).</p>
+
+<h2>11. Age</h2>
+<p>The public test group (BETA) is open only to people aged 18 or over.</p>
+
+<h2>12. Changes</h2>
+<p>If the data the game processes changes, we update this page; the date at the top shows the current version.</p>
+</section>
+</main>
+<script>
+  // Sprache umschalten (Standard: Sprache des Browsers). Speichert bewusst nichts im Browser (keine Cookies, kein localStorage –
+  // sonst bräuchte die Seite eine Einwilligung nach § 25 TDDDG).
+  (function () {
+    var knoepfe = document.querySelectorAll(".umschalter button");
+    function zeigen(sp) {
+      document.querySelectorAll("section[lang]").forEach(function (s) { s.hidden = s.lang !== sp; });
+      knoepfe.forEach(function (k) { k.setAttribute("aria-pressed", String(k.dataset.sprache === sp)); });
+      document.documentElement.lang = sp;
+    }
+    zeigen((navigator.language || "de").toLowerCase().indexOf("de") === 0 ? "de" : "en");
+    knoepfe.forEach(function (k) { k.addEventListener("click", function () { zeigen(k.dataset.sprache); }); });
+  })();
+</script>
+</body>
+</html>
