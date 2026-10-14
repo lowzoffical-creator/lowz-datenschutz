@@ -64,7 +64,7 @@ Dein Konto kannst du jederzeit im Spiel löschen.</div>
 <tbody>
 <tr><td>Spielkonto: zufällige Konto-Nummer („Tester-Nummer“), Prüfwert (Hash) eines zufälligen Geräte-Schlüssels, den die App selbst erzeugt (keine Gerätekennung), Spielwerte (z. B. Münzen, Stufe, Freischaltungen), Zeitpunkte von Anlage und letzter Anmeldung, Zustimmung zu den Tester-Hinweisen (Fassung und Zeitpunkt), ggf. Sperrvermerk</td>
 <td>Anmeldung am Spielserver, Spielfortschritt</td><td>bis du das Konto löschst</td></tr>
-<tr><td>Meta-Konto (nur am Test-Server mit der Store-App): die zwei Nutzerkennungen, die Meta für diese App bzw. unsere Organisation vergibt („app-scoped“ und „org-scoped ID“), Zeitpunkt der Verknüpfung und der letzten Prüfung</td>
+<tr><td>Meta-Konto (nur am Test-Server mit der Store-App): die zwei Nutzerkennungen, die Meta für diese App bzw. unsere Organisation vergibt („app-scoped“ und „org-scoped ID“), Zeitpunkt der Verknüpfung und der letzten Prüfung; dazu bei jeder Anmeldung ein Einmal-Nachweis deiner App, den der Server nur zur Prüfung an Meta weitergibt und danach verwirft (nie gespeichert)</td>
 <td>nur berechtigte Tester zulassen (Meta bestätigt die Berechtigung), dein Konto nach einer Neuinstallation wiederfinden, später Käufe zuordnen</td><td>bis du das Konto löschst</td></tr>
 <tr><td>IP-Adresse</td><td>Verbindung herstellen, Schutz vor Missbrauch (Begrenzung von Anmeldeversuchen)</td><td>vollständig nur im Arbeitsspeicher des Servers, solange die Begrenzung sie braucht; in Server-Protokollen nur gekürzt (letzter Teil entfernt), 14 Tage</td></tr>
 <tr><td>Bewegungen im Spiel (Lage von Kopf und Händen, Ort der Spielfigur)</td><td>Darstellung deiner Spielfigur bei Mitspielern; Prüfung auf unmögliche Bewegungen (Schummelschutz) und Fehlersuche</td><td>Mitschnitt 14 Tage</td></tr>
@@ -136,7 +136,7 @@ You can delete your account in the game at any time.</div>
 <tbody>
 <tr><td>Game account: random account number (“tester number”), a check value (hash) of a random device key that the app creates itself (not a hardware identifier), game values (e.g. coins, level, unlocks), time of creation and last sign-in, acceptance of the tester notes (version and time), a ban note if any</td>
 <td>Signing in to the game server, game progress</td><td>until you delete the account</td></tr>
-<tr><td>Meta account (only on the test server with the store app): the two user IDs Meta assigns for this app and for our organisation (“app-scoped” and “org-scoped ID”), time of linking and of the last check</td>
+<tr><td>Meta account (only on the test server with the store app): the two user IDs Meta assigns for this app and for our organisation (“app-scoped” and “org-scoped ID”), time of linking and of the last check; plus, at each sign-in, a one-time proof from your app that the server only forwards to Meta for the check and then discards (never stored)</td>
 <td>admitting only entitled testers (Meta confirms the entitlement), finding your account again after a reinstall, later assigning purchases</td><td>until you delete the account</td></tr>
 <tr><td>IP address</td><td>establishing the connection, protection against abuse (limiting sign-in attempts)</td><td>in full only in the server’s memory while the limit needs it; in server logs only shortened (last part removed), 14 days</td></tr>
 <tr><td>Movements in the game (position of head and hands, location of your character)</td><td>showing your character to other players; checking for impossible movement (anti-cheat) and troubleshooting</td><td>recording kept 14 days</td></tr>
