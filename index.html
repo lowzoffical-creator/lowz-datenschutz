@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- Datenschutzerklärung Low-Z (Phase 14e, F2: GitHub Pages, Deutsch + Englisch mit Umschalter – Nutzer 14.10.2026).
+<!-- Datenschutzerklärung LowZ (Name „LowZ“ seit 13.11.2026, Nutzer; vorher „Low-Z“) (Phase 14e, F2: GitHub Pages, Deutsch + Englisch mit Umschalter – Nutzer 14.10.2026).
      Quelle der Angaben: docs/systeme/server.md „Datenliste und Fristen“ und docs/systeme/plattform.md – ändert sich dort etwas,
      hier im selben Zug nachziehen und das Datum „Stand“ erhöhen. Veröffentlicht mit tools/datenschutz.py (eigenes Repo, Pages).
      Verantwortlicher und Kontakt-Mail: Angabe des Nutzers 14.10.2026.
@@ -13,12 +13,16 @@
      Nachgezogen 26.10.2026 (Phase 8l Schritt 0d) nach docs/datenschutz-pruefung.md (Prüfer R4): B2 Sperrliste, B3 Bewegungsdaten,
      B5 E-Mail, B6 Meta-Feedback, B7 §8, B8 §2, B9 „Privacy Policy“ ohne JavaScript; Fristen E-Mail/Feedback 12 Monate (Nutzer F8), Sperrliste bei Sperre ohne Ende 24 Monate,
      §11 Satz 2 (Löschen bei unter 18) – beides Nutzer 26.10. (Auswahlfragen);
-     Sicherungen mit Übergangstext bis zum Werkzeug-Fix B4 (14b bzw. Serverstunde). -->
+     Sicherungen mit Übergangstext bis zum Werkzeug-Fix B4 (14b bzw. Serverstunde).
+     Nachgezogen 18.11.2026 (Phase 14g V7/V8, Bau-Helfer): Sprachchat (Weiterleitung ohne Speichern, Mikrofon-Erlaubnis, Aus-Schalter, Stumm/Blockieren
+     am Konto), Begegnungs-Protokoll (scripts/netz/begegnungs_protokoll.gd: Zeitspannen je Kontakt, 30 Tage, ohne Meta-IDs, außerhalb der Sicherungen, Konto löschen
+     entfernt die Konto-Nummer), Melde-Weg über Meta (User Reporting Service, Plan phase-14g-server-leistung-plan.md §4 „V7/V8 Meta“, Stand 17.11.).
+     Veröffentlichen erst nach Abnahme durch die Hauptsitzung (tools/datenschutz.py veroeffentlichen). -->
 <html lang="de">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Low-Z – Datenschutzerklärung / Privacy Policy</title>
+<title>LowZ – Datenschutzerklärung / Privacy Policy</title>
 <style>
   :root { --bg: #0b0b0c; --karte: #151517; --text: #e9e6e3; --leise: #a39e99; --rot: #c1121f; --linie: #2a2a2e; }
   * { box-sizing: border-box; }
@@ -46,7 +50,7 @@
 <body>
 <main>
 <header>
-  <div class="marke">LOW-<b>Z</b></div>
+  <div class="marke">LOW<b>Z</b></div>
   <div class="umschalter" role="group" aria-label="Sprache / Language">
     <button type="button" data-sprache="de" aria-pressed="true">Deutsch</button>
     <button type="button" data-sprache="en" aria-pressed="false">English</button>
@@ -56,9 +60,9 @@
 <!-- ======================================================================= DEUTSCH -->
 <section lang="de">
 <h1>Datenschutzerklärung <small lang="en">(Privacy Policy – English version: button “English” at the top)</small></h1>
-<p class="stand">Stand: 26. Oktober 2026 · gilt für das VR-Spiel „Low-Z“ (Meta Quest) und seine Spielserver</p>
+<p class="stand">Stand: 18. November 2026 · gilt für das VR-Spiel „LowZ“ (Meta Quest) und seine Spielserver</p>
 
-<div class="karte"><strong>Kurz gesagt:</strong> Low-Z ist ein Spiel in Entwicklung, das über die Test-Kanäle des Meta Horizon Store verteilt wird.
+<div class="karte"><strong>Kurz gesagt:</strong> LowZ ist ein Spiel in Entwicklung, das über die Test-Kanäle des Meta Horizon Store verteilt wird.
 Wir speichern nur, was für das Spielen auf unseren Servern nötig ist. Es gibt keine Werbung, kein Tracking und keine Analyse-Dienste.
 Dein Konto kannst du jederzeit im Spiel löschen.</div>
 
@@ -75,6 +79,9 @@ Dein Konto kannst du jederzeit im Spiel löschen.</div>
 <tr><td>IP-Adresse</td><td>Verbindung herstellen, Schutz vor Missbrauch (Begrenzung von Anmeldeversuchen)</td><td>vollständig nur im Arbeitsspeicher des Servers, solange die Begrenzung sie braucht; in Server-Protokollen nur gekürzt (letzter Teil entfernt), 14 Tage</td></tr>
 <tr><td>Bewegungen und Haltung im Spiel: Lage und Drehung von Kopf und Händen, Fingerhaltung (bei Hand-Tracking), Tempo, Hocke, Körpergröße aus der Kalibrierung, Eingabeart (Controller oder Hände), Ort der Spielfigur</td>
 <td>Darstellung deiner Spielfigur bei Mitspielern (in deiner Größe); Prüfung auf unmögliche Bewegungen (Schummelschutz) und Fehlersuche</td><td>laufend nur im Arbeitsspeicher des Servers (letzte 60 Sekunden); als Mitschnitt nur, wenn die Bewegungsprüfung anschlägt (höchstens fünf Mitschnitte je Server), 14 Tage</td></tr>
+<tr><td>Sprachchat: deine Stimme, solange du sprichst (komprimierte Sprach-Pakete), mit Nummer der Verbindung und Kanal (Nähe oder Funk)</td><td>Mitspielern in Hörweite bzw. auf deinem Funk-Kanal deine Stimme weiterleiten</td><td>nicht gespeichert – der Server leitet die Pakete sofort weiter und hört nicht mit</td></tr>
+<tr><td>Stumm- und Blockier-Liste am Spielkonto: Konto-Nummern der Spieler, die du stumm geschaltet oder blockiert hast</td><td>deine Wahl auch nach einem Neustart einhalten (Blockieren wirkt in beide Richtungen)</td><td>bis du den Eintrag aufhebst oder dein Konto löschst; wird ein anderes Konto gelöscht, verschwindet sein Eintrag aus deiner Liste</td></tr>
+<tr><td>Begegnungs-Protokoll: Beginn und Ende eines Kontakts, die Konto-Nummern der zwei Spieler, die sich in Sprach-Hörweite befanden oder über Funk Kontakt hatten, ihr kleinster Abstand in Metern und der Kanal (Nähe oder Funk) – eine Zeile je zusammenhängendem Kontakt, festgestellt alle 10 Sekunden; ohne Meta-Kennung, ohne Sprache, ohne Ort</td><td>Meldungen über Spieler prüfen (wer war wann mit wem in Kontakt), Missbrauch abwehren</td><td>30 Tage, danach löscht der Server es selbst; nicht in Sicherungen</td></tr>
 <tr><td>Server-Protokolle: technische Ereignisse wie Anmeldung (mit Tester-Nummer und gekürzter IP), App-Version, Fehler</td><td>Betrieb und Fehlersuche</td><td>14 Tage</td></tr>
 <tr><td>Sicherungen der Server-Daten (enthalten Spielkonten mit Meta-Verknüpfung, Sperrliste, Konto-Buch und Verwaltungsprotokoll)</td><td>Schutz vor Datenverlust</td><td>auf dem Server 30 Tage; als Kopie auf dem Rechner des Verantwortlichen die letzten fünf Sicherungen; gelöschte Konten werden beim Zurückspielen einer Sicherung sofort wieder entfernt</td></tr>
 <tr><td>Verwaltungsprotokoll (z. B. Sperren, Zugangscodes, Löschungen – mit Konto-Nummer, ohne IP)</td><td>Nachvollziehbarkeit von Verwaltungsentscheidungen, Missbrauchsabwehr</td><td>24 Monate; gelöscht wird monatsweise (eine Zeile bleibt höchstens 25 Monate)</td></tr>
@@ -83,11 +90,16 @@ Dein Konto kannst du jederzeit im Spiel löschen.</div>
 <tr><td>Feedback über die Meta-Funktion „Submit Playtesting Feedback“: was du dort selbst abschickst (Text, Bilder, Videos, ggf. Sprachnachricht)</td><td>Fehler finden und das Spiel verbessern</td><td>im Entwickler-Bereich von Meta, solange Meta es dort bereitstellt; Kopien, die wir herunterladen, 12 Monate</td></tr>
 </tbody>
 </table>
-<p>Das Spiel selbst nimmt keine Sprache auf; eine Sprachnachricht erhalten wir nur, wenn du sie über die Feedback-Funktion von Meta abschickst. Wir erheben keine Namen, Anschriften, Telefonnummern oder Zahlungsdaten – außer du schreibst sie uns in einer E-Mail.</p>
+<h3>Sprachchat</h3>
+<p>Mit dem Sprachchat hören dich Mitspieler in deiner Nähe (und, wenn du ein Funkgerät nutzt, auf demselben Funk-Kanal). Deine Stimme wird dabei <strong>nur weitergeleitet und nie gespeichert</strong>: Die App schickt sie in kleinen, komprimierten Paketen an unseren Server, der sie sofort an die Mitspieler in Hörweite weitergibt; der Server hört nicht mit und zeichnet nichts auf.</p>
+<p><strong>Mikrofon:</strong> Die App nutzt das Mikrofon erst, wenn du es beim ersten Betreten der Welt erlaubst (die Brille fragt dich). Im Menü auf der Seite „Sprachchat“ schaltest du es jederzeit aus – dann ist das Mikrofon für das Spiel geschlossen. Solange das Menü der Quest offen ist oder der Party-Chat das Mikrofon hat, sendet das Spiel nichts. Ohne Erlaubnis kannst du weiter spielen; du hörst die anderen, sie hören dich nicht.</p>
+<p><strong>Begegnungs-Protokoll:</strong> Damit wir Meldungen prüfen können, stellt der Server alle 10 Sekunden fest, welche zwei Spielkonten sich in Sprach-Hörweite befinden oder über Funk Kontakt haben, und notiert je Kontakt eine Zeitspanne (Beginn, Ende, Konto-Nummern, kleinster Abstand, Kanal – siehe Tabelle). Es enthält keine Meta-Kennung, keine Sprache und keinen Ort, liegt nicht in Sicherungen und wird nach 30 Tagen gelöscht. Löschst du dein Konto, ersetzt der Server deine Konto-Nummer darin sofort durch „gelöscht“.</p>
+<p><strong>Melden:</strong> Störende Spieler meldest du über die Melde-Funktion von Meta. Die Meldung landet verschlüsselt in unserem Melde-Eingang bei Meta (dort 90 Tage); deine E-Mail-Adresse fragt das Formular nicht ab. Für den Melde-Dienst selbst ist Meta verantwortlich (Abschnitt 4).</p>
+<p>Eine Sprachnachricht erhalten wir außerdem nur, wenn du sie über die Feedback-Funktion von Meta abschickst. Wir erheben keine Namen, Anschriften, Telefonnummern oder Zahlungsdaten – außer du schreibst sie uns in einer E-Mail.</p>
 
 <h2>2. Zwecke und Rechtsgrundlagen</h2>
-<p><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> – Bereitstellung des Spiels und der Testteilnahme, die du mit dem Beitritt zum Test-Kanal und dem Start der App wünschst (Spielkonto, Meta-Prüfung, Bewegungen und Körpergröße für die Darstellung deiner Spielfigur, Konto-Buch für deinen Besitz im Spiel, Sicherungen).<br>
-<strong>Art. 6 Abs. 1 lit. f DSGVO</strong> – unser berechtigtes Interesse an einem sicheren und fairen Betrieb: Missbrauch und Angriffe abwehren (IP-Begrenzung, Sperren und Sperrliste, Verwaltungsprotokoll, Konto-Buch nach dem Löschen eines Kontos), Schummeln erkennen und Fehler finden (Protokolle, Bewegungs-Mitschnitt, Feedback), Anfragen und Meldungen per E-Mail bearbeiten und diese Seite sicher bereitstellen (GitHub).</p>
+<p><strong>Art. 6 Abs. 1 lit. b DSGVO</strong> – Bereitstellung des Spiels und der Testteilnahme, die du mit dem Beitritt zum Test-Kanal und dem Start der App wünschst (Spielkonto, Meta-Prüfung, Bewegungen und Körpergröße für die Darstellung deiner Spielfigur, Weiterleiten deiner Stimme im Sprachchat, deine Stumm- und Blockier-Liste, Konto-Buch für deinen Besitz im Spiel, Sicherungen).<br>
+<strong>Art. 6 Abs. 1 lit. f DSGVO</strong> – unser berechtigtes Interesse an einem sicheren und fairen Betrieb: Missbrauch und Angriffe abwehren (IP-Begrenzung, Sperren und Sperrliste, Verwaltungsprotokoll, Konto-Buch nach dem Löschen eines Kontos, Begegnungs-Protokoll zum Prüfen von Meldungen), Schummeln erkennen und Fehler finden (Protokolle, Bewegungs-Mitschnitt, Feedback), Anfragen und Meldungen per E-Mail bearbeiten und diese Seite sicher bereitstellen (GitHub).</p>
 
 <h2>3. Musst du die Daten angeben?</h2>
 <p>Gesetzlich nicht. Ohne diese Daten kannst du aber nicht auf unseren Servern spielen. Allein (ohne Server) spielt die App ohne Server-Konto.</p>
@@ -95,11 +107,11 @@ Dein Konto kannst du jederzeit im Spiel löschen.</div>
 <h2>4. Empfänger</h2>
 <ul>
 <li><strong>Hetzner Online GmbH</strong>, Industriestr. 25, 91710 Gunzenhausen, Deutschland – betreibt den Server (Standort Nürnberg) als Auftragsverarbeiter nach Art. 28 DSGVO.</li>
-<li><strong>Meta</strong> (für Nutzer in der EU: Meta Platforms Ireland Limited) – unser Server übermittelt den von deiner App erzeugten Einmal-Nachweis und deine Nutzerkennung an Meta, damit Meta bestätigt, dass dein Meta-Konto die App nutzen darf. Für Daten, die Meta selbst verarbeitet (Store, Test-Kanäle, Feedback-Funktion), ist Meta eigenständig verantwortlich; es gilt die Datenschutzrichtlinie von Meta.</li>
+<li><strong>Meta</strong> (für Nutzer in der EU: Meta Platforms Ireland Limited) – unser Server übermittelt den von deiner App erzeugten Einmal-Nachweis und deine Nutzerkennung an Meta, damit Meta bestätigt, dass dein Meta-Konto die App nutzen darf. Für Daten, die Meta selbst verarbeitet (Store, Test-Kanäle, Feedback-Funktion, Melde-Funktion, Party-Chat), ist Meta eigenständig verantwortlich; es gilt die Datenschutzrichtlinie von Meta.</li>
 <li><strong>GitHub, Inc.</strong> – stellt diese Seite bereit; beim Aufruf verarbeitet GitHub technische Zugriffsdaten (z. B. IP-Adresse).</li>
 <li><strong>Google</strong> (für Nutzer in der EU: Google Ireland Limited) – stellt unser E-Mail-Postfach (Gmail) bereit; schreibst du uns, verarbeitet Google deine E-Mail.</li>
 </ul>
-<p>Andere Spieler sehen deine Spielfigur in deiner Größe, ihre Bewegungen und Handhaltung sowie die Kosmetik, die du gewählt hast – nie deine Kennungen. Wir geben keine Daten an weitere Dritte weiter und verkaufen keine Daten. Meta-Kennungen geben wir nie an andere Spieler oder fremde Server weiter.</p>
+<p>Andere Spieler sehen deine Spielfigur in deiner Größe, ihre Bewegungen und Handhaltung sowie die Kosmetik, die du gewählt hast, und hören deine Stimme, wenn sie in Hörweite oder auf deinem Funk-Kanal sind – nie deine Kennungen; wen du blockierst, der hört dich nicht. Wir geben keine Daten an weitere Dritte weiter und verkaufen keine Daten. Meta-Kennungen geben wir nie an andere Spieler oder fremde Server weiter.</p>
 
 <h2>5. Übermittlung in Drittländer</h2>
 <p>Unser Server steht in Deutschland. Bei der Meta-Prüfung, beim Aufruf dieser Seite und bei E-Mails an uns können Daten in die USA gelangen. Grundlage ist der Angemessenheitsbeschluss der EU-Kommission zum EU-US Data Privacy Framework (Art. 45 DSGVO); Meta Platforms, Inc., GitHub, Inc. und Google LLC sind danach zertifiziert.</p>
@@ -120,6 +132,7 @@ Alternativ per E-Mail (Abschnitt 10) mit deiner Tester-Nummer (steht im Startmen
 <li><strong>Nummer des gelöschten Kontos mit Löschzeitpunkt</strong> (dauerhaft): damit die Nummer nie neu vergeben wird und eine zurückgespielte Sicherung das Konto nicht zurückbringt.</li>
 <li><strong>Nur bei gesperrten Konten:</strong> der Prüfwert der Meta-Kennung auf der Sperrliste (Abschnitt 1) – damit ein gesperrtes Meta-Konto nicht mit einem neuen Spielkonto zurückkommt.</li>
 <li><strong>Server-Protokolle und Bewegungs-Mitschnitte</strong> laufen nach 14 Tagen von selbst ab.</li>
+<li><strong>Begegnungs-Protokoll:</strong> deine Konto-Nummer wird sofort durch „gelöscht“ ersetzt; deine Stumm- und Blockier-Liste geht mit dem Konto, Einträge anderer über dich werden entfernt.</li>
 </ul>
 
 <h2>9. Deine Rechte</h2>
@@ -143,9 +156,9 @@ Ein Datenschutzbeauftragter ist nicht bestellt (keine Pflicht nach Art. 37 DSGVO
 <!-- ======================================================================= ENGLISH -->
 <section lang="en">
 <h1>Privacy Policy</h1>
-<p class="stand">Last updated: 26 October 2026 · applies to the VR game “Low-Z” (Meta Quest) and its game servers</p>
+<p class="stand">Last updated: 18 November 2026 · applies to the VR game “LowZ” (Meta Quest) and its game servers</p>
 
-<div class="karte"><strong>In short:</strong> Low-Z is a game in development, distributed through the test channels of the Meta Horizon Store.
+<div class="karte"><strong>In short:</strong> LowZ is a game in development, distributed through the test channels of the Meta Horizon Store.
 We only store what is needed to play on our servers. There is no advertising, no tracking and no analytics.
 You can delete your account in the game at any time.</div>
 
@@ -162,6 +175,9 @@ You can delete your account in the game at any time.</div>
 <tr><td>IP address</td><td>establishing the connection, protection against abuse (limiting sign-in attempts)</td><td>in full only in the server’s memory while the limit needs it; in server logs only shortened (last part removed), 14 days</td></tr>
 <tr><td>Movement and posture in the game: position and rotation of head and hands, finger pose (with hand tracking), speed, crouch, body height from calibration, input type (controllers or hands), location of your character</td>
 <td>showing your character to other players (at your height); checking for impossible movement (anti-cheat) and troubleshooting</td><td>continuously only in the server’s memory (last 60 seconds); recorded only when the movement check triggers (at most five recordings per server), 14 days</td></tr>
+<tr><td>Voice chat: your voice while you speak (compressed voice packets), with the number of your connection and the channel (proximity or radio)</td><td>forwarding your voice to players within hearing range or on your radio channel</td><td>not stored – the server forwards the packets immediately and does not listen in</td></tr>
+<tr><td>Mute and block list on your game account: account numbers of the players you muted or blocked</td><td>keeping your choice even after a restart (blocking works both ways)</td><td>until you lift the entry or delete your account; if another account is deleted, its entry disappears from your list</td></tr>
+<tr><td>Encounter log: start and end of a contact, the account numbers of the two players who were within voice range of each other or in radio contact, their smallest distance in metres and the channel (proximity or radio) – one line per continuous contact, checked every 10 seconds; without Meta ID, without voice, without location</td><td>checking reports about players (who was in contact with whom and when), abuse prevention</td><td>30 days, after which the server deletes it itself; not in backups</td></tr>
 <tr><td>Server logs: technical events such as sign-ins (with tester number and shortened IP), app version, errors</td><td>operation and troubleshooting</td><td>14 days</td></tr>
 <tr><td>Backups of the server data (contain game accounts with Meta links, the ban list, the account ledger and the administration log)</td><td>protection against data loss</td><td>30 days on the server; as a copy on the controller’s computer the last five backups; deleted accounts are removed again immediately when a backup is restored</td></tr>
 <tr><td>Administration log (e.g. bans, access codes, deletions – with account number, without IP)</td><td>traceability of administrative decisions, abuse prevention</td><td>24 months; deleted month by month (a line is kept for at most 25 months)</td></tr>
@@ -170,11 +186,16 @@ You can delete your account in the game at any time.</div>
 <tr><td>Feedback through Meta’s “Submit Playtesting Feedback” feature: what you send there yourself (text, images, videos, voice message if any)</td><td>finding bugs and improving the game</td><td>in Meta’s developer area as long as Meta provides it there; copies we download 12 months</td></tr>
 </tbody>
 </table>
-<p>The game itself does not record voice; we only receive a voice message if you send one through Meta’s feedback feature. We do not collect names, postal addresses, phone numbers or payment data – unless you write them to us in an e-mail.</p>
+<h3>Voice chat</h3>
+<p>With voice chat, players near you can hear you (and, if you use a radio, players on the same radio channel). Your voice is <strong>only forwarded and never stored</strong>: the app sends it in small compressed packets to our server, which passes them on immediately to the players within hearing range; the server does not listen in and records nothing.</p>
+<p><strong>Microphone:</strong> The app only uses the microphone once you allow it when you first enter the world (your headset asks you). On the “Voice chat” page of the menu you can turn it off at any time – the microphone is then closed for the game. While the Quest menu is open or party chat has the microphone, the game sends nothing. Without permission you can keep playing; you hear the others, they do not hear you.</p>
+<p><strong>Encounter log:</strong> So that we can check reports, the server checks every 10 seconds which two game accounts are within voice range of each other or in radio contact, and notes one time span per contact (start, end, account numbers, smallest distance, channel – see the table). It contains no Meta ID, no voice and no location, is not part of backups and is deleted after 30 days. If you delete your account, the server immediately replaces your account number in it with “deleted”.</p>
+<p><strong>Reporting:</strong> You report disruptive players through Meta’s reporting feature. The report arrives encrypted in our reporting inbox at Meta (kept there for 90 days); the form does not ask for your e-mail address. Meta is responsible for the reporting service itself (section 4).</p>
+<p>Apart from that, we only receive a voice message if you send one through Meta’s feedback feature. We do not collect names, postal addresses, phone numbers or payment data – unless you write them to us in an e-mail.</p>
 
 <h2>2. Purposes and legal basis</h2>
-<p><strong>Art. 6(1)(b) GDPR</strong> – providing the game and the test participation you request by joining the test channel and starting the app (game account, Meta check, movement and body height for showing your character, account ledger for what you own in the game, backups).<br>
-<strong>Art. 6(1)(f) GDPR</strong> – our legitimate interest in secure and fair operation: preventing abuse and attacks (IP limits, bans and the ban list, administration log, account ledger after an account is deleted), detecting cheating and finding bugs (logs, movement recording, feedback), handling requests and reports by e-mail and providing this page securely (GitHub).</p>
+<p><strong>Art. 6(1)(b) GDPR</strong> – providing the game and the test participation you request by joining the test channel and starting the app (game account, Meta check, movement and body height for showing your character, forwarding your voice in voice chat, your mute and block list, account ledger for what you own in the game, backups).<br>
+<strong>Art. 6(1)(f) GDPR</strong> – our legitimate interest in secure and fair operation: preventing abuse and attacks (IP limits, bans and the ban list, administration log, account ledger after an account is deleted, encounter log for checking reports), detecting cheating and finding bugs (logs, movement recording, feedback), handling requests and reports by e-mail and providing this page securely (GitHub).</p>
 
 <h2>3. Do you have to provide the data?</h2>
 <p>Not by law. Without this data, however, you cannot play on our servers. In single-player mode (without a server) the app works without a server account.</p>
@@ -182,11 +203,11 @@ You can delete your account in the game at any time.</div>
 <h2>4. Recipients</h2>
 <ul>
 <li><strong>Hetzner Online GmbH</strong>, Industriestr. 25, 91710 Gunzenhausen, Germany – runs the server (located in Nuremberg) as a processor under Art. 28 GDPR.</li>
-<li><strong>Meta</strong> (for users in the EU: Meta Platforms Ireland Limited) – our server sends the one-time proof created by your app and your user ID to Meta so that Meta confirms your Meta account may use the app. For data that Meta processes itself (store, test channels, feedback feature), Meta is an independent controller; Meta’s privacy policy applies.</li>
+<li><strong>Meta</strong> (for users in the EU: Meta Platforms Ireland Limited) – our server sends the one-time proof created by your app and your user ID to Meta so that Meta confirms your Meta account may use the app. For data that Meta processes itself (store, test channels, feedback feature, reporting feature, party chat), Meta is an independent controller; Meta’s privacy policy applies.</li>
 <li><strong>GitHub, Inc.</strong> – hosts this page; when you open it, GitHub processes technical access data (e.g. IP address).</li>
 <li><strong>Google</strong> (for users in the EU: Google Ireland Limited) – provides our mailbox (Gmail); if you write to us, Google processes your e-mail.</li>
 </ul>
-<p>Other players see your character at your height, its movements and hand pose, and the cosmetics you chose – never your IDs. We do not pass data to any other third parties and do not sell data. We never pass Meta IDs to other players or to third-party servers.</p>
+<p>Other players see your character at your height, its movements and hand pose, and the cosmetics you chose, and hear your voice when they are within hearing range or on your radio channel – never your IDs; anyone you block does not hear you. We do not pass data to any other third parties and do not sell data. We never pass Meta IDs to other players or to third-party servers.</p>
 
 <h2>5. Transfers to third countries</h2>
 <p>Our server is located in Germany. During the Meta check, when you open this page and when you e-mail us, data may reach the USA. The basis is the European Commission’s adequacy decision on the EU-US Data Privacy Framework (Art. 45 GDPR); Meta Platforms, Inc., GitHub, Inc. and Google LLC are certified under it.</p>
@@ -207,6 +228,7 @@ Alternatively by e-mail (section 10) with your tester number (shown in the start
 <li><strong>Number of the deleted account with the time of deletion</strong> (permanently): so the number is never reused and a restored backup does not bring the account back.</li>
 <li><strong>Only for banned accounts:</strong> the check value of the Meta ID on the ban list (section 1) – so that a banned Meta account cannot return with a new game account.</li>
 <li><strong>Server logs and movement recordings</strong> expire on their own after 14 days.</li>
+<li><strong>Encounter log:</strong> your account number is immediately replaced with “deleted”; your mute and block list goes with the account, other players’ entries about you are removed.</li>
 </ul>
 
 <h2>9. Your rights</h2>
